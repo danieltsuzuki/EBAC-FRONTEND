@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+}
+
+header {
+    padding: 50px;
+}
+
+form {
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #c7c7c72a;
+    width: 300px;
+    margin: 0 auto;
+    height: 200px;
+    padding: 30px;
+}
+
+input {
+    margin: 0;
+    padding: 10px;
+}
+
+button {
+    margin-bottom: 40px;
+    padding: 12px;
+    background-color: #29d331;
+    border: none;
+    border-radius: 4px;
+    color: rgb(255, 0, 0);
+    font-weight: 600;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#buttonRetry {
+    display: none;
+    margin-top: 30px;
+}
