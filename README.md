@@ -27,3 +27,8 @@
 
 ## Estilização (Opcional):
 - Use CSS para estilizar a página, deixando-a mais atraente e amigável.
+
+<img width="1423" height="497" alt="image" src="https://github.com/user-attachments/assets/a310ac4b-0657-427e-b0f4-1c140b93570e" />
+<img width="1386" height="477" alt="image" src="https://github.com/user-attachments/assets/272c7fe6-8534-4727-9f63-7fcb12deccb9" />
+
+
