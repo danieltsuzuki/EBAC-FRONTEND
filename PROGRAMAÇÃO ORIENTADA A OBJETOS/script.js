@@ -25,6 +25,7 @@ class Calculator {
     }
 
     calculate() {
+        this.resetMessage()
         try {
             this._value = Number(document.getElementById("inputValue").value);
             this.validateValue(this.value);
@@ -59,7 +60,7 @@ class Calculator {
     }
 
     clearInput() {
-        document.getElementById("inputValue").textContent = "";
+        document.getElementById("inputValue").value = "";
     }
 
     alterColorMessage() {
@@ -72,6 +73,10 @@ class Calculator {
 
     normalizeMessage() {
         this._message = this._message.replace(".", ",");
+    }
+
+    resetMessage() {
+        this._message = "Valor insuficiente";
     }
 }
 
