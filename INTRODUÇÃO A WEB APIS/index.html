@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        #cepError {
+            color: red;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <form class="container mt-5 border p-5">
+        <div class="mb-3">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="cep">
+            <p id="cepError" class="form-text"></p>
+        </div>
+        <div class="mb-3">
+            <label for="logradouro" class="form-label">Logradouro</label>
+            <input type="text" class="form-control" id="logradouro">
+        </div>
+        <div class="mb-3">
+            <label for="bairro" class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="bairro">
+        </div>
+        <div class="mb-3">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade">
+        </div>
+        <div class="mb-3">
+            <label for="uf" class="form-label">UF</label>
+            <input type="text" class="form-control" id="uf">
+        </div>
+        <div class="mb-3">
+            <label for="numero" class="form-label">Número</label>
+            <input type="text" class="form-control" id="numero">
+        </div>
+        <div class="mb-3">
+            <label for="complemento" class="form-label">Complemento</label>
+            <input type="text" class="form-control" id="complemento">
+        </div>
+        <button type="button" class="btn btn-primary" id="buttonEnviar">Enviar</button>
+        <button type="button" class="btn btn-warning" id="buttonLimpar">Limpar</button>
+    </form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+<script src="script.js"></script>
+
+</html>
