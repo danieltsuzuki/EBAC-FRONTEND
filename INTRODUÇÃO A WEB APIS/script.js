@@ -1,4 +1,5 @@
 const input = document.getElementById("cep");
+let cepError = document.getElementById("cepError");
 
 document.addEventListener('DOMContentLoaded', () => {
     loadLocalStorage()
@@ -7,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 input.addEventListener("blur", async () => {
 
     let cep = document.getElementById("cep").value;
-    let cepError = document.getElementById("cepError");
     let cepIsValid = /^[0-9]{8}$/;
 
     if (!cepIsValid.test(cep)) {
@@ -15,7 +15,10 @@ input.addEventListener("blur", async () => {
         clearForm();
     } else {
         cepError.textContent = "";
-        const response = await requestApi(`https://viacep.com.br/ws/${cep}/json/`);
+        const response = await requestApi(`https://cors-anywhere.herokuapp.com/https://viacep.com.br/ws/${cep}/json/`);
+        if (!response) {
+            return;
+        }
         completeForm(response);
         saveLocalStorage(response);
     }
