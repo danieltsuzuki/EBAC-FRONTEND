@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+                <defs>
+                    <!-- Definição de Gradientes para um look moderno -->
+                    <linearGradient id="gradOrange" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF5722;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FF9800;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="gradBlue" x1="100%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" style="stop-color:#0D47A1;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#2196F3;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+
+                <!-- Grupo do Ícone -->
+                <g transform="translate(75, 20)">
+                    <!-- Seta Azul (Parte direita do N) -->
+                    <path d="M 100,100 L 100,20 L 130,50 L 115,50 L 115,100 Z" fill="url(#gradBlue)" />
+
+                    <!-- Seta Laranja (Parte esquerda e diagonal do N, cruzando sobre a azul) -->
+                    <!-- Usando fill-rule="evenodd" para criar o efeito de vazado na interseção se necessário, mas aqui faremos sobreposição -->
+                    <path d="M 20,100 L 20,20 L 50,20 L 115,85 L 115,55 L 145,85 L 115,115 L 115,100 L 50,35 L 50,100 Z"
+                        fill="url(#gradOrange)" />
+
+                    <!-- Pequeno detalhe de interseção para dar profundidade (opcional) -->
+                    <path d="M 100,70 L 115,85 L 100,100 Z" fill="#001F5B" opacity="0.2" />
+                </g>
+
+                <!-- Texto do Logo -->
+                <g transform="translate(150, 160)" text-anchor="middle"
+                    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+                    <text x="0" y="0" font-size="24" font-weight="bold" fill="#0D47A1" letter-spacing="1">NEXUS
+                        CRIATIVO</text>
+                    <!-- <text x="0" y="20" font-size="10" fill="#FF5722" letter-spacing="2">AGÊNCIA DIGITAL</text> -->
+                </g>
+            </svg>
+
+            <ul class="nav__list">
+                <li class="nav__list__item"><a href="" class="nav__list__item__link">Home</a></li>
+                <li class="nav__list__item"><a href="" class="nav__list__item__link">Sobre Nós</a></li>
+                <li class="nav__list__item"><a href="" class="nav__list__item__link">Serviços</a></li>
+                <li class="nav__list__item"><a href="" class="nav__list__item__link">Depoimentos</a></li>
+                <li class="nav__list__item"><a href="" class="nav__list__item__link">Contato</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="home">
+        <img loading="lazy" srcset="banner-mobile.jpg 768w,
+                banner-tablet.jpg 896w,
+                banner-desktop.jpg 1584w" sizes="
+                (max-width: 600px) 768px,
+                (max-width: 769px) 896px,
+                1584px" src="banner-desktop.jpg" alt="Banner da empresa" class="home__banner">
+        <p class="home__text">Na NEXUS CRIATIVO, unimos estratégia, design e tecnologia para transformar boas ideias em
+            resultados reais
+            para o seu negócio. Da identidade visual ao site completo, criamos experiências que aproximam sua marca do
+            público certo.</p>
+        <div class="home__options">
+            <button class="home__buttom home__buttom--action">Quero impulsionar minha marca</button>
+            <button class="home__buttom home__buttom--contact">Fale com um especialista</button>
+        </div>
+    </main>
+
+    <section class="about">
+        <h2 class="about__title">Sobre a NEXUS CRIATIVO</h2>
+        <p class="about__text">A NEXUS CRIATIVO é uma agência focada em construir marcas fortes, relevantes e memoráveis.
+            Acreditamos que
+            uma boa ideia só é completa quando gera resultado — por isso, conectamos criatividade, dados e estratégia em
+            cada projeto.
+            Trabalhamos lado a lado com nossos clientes para entender sua essência, seus desafios e objetivos. A partir
+            disso, desenvolvemos soluções personalizadas que fortalecem a presença digital e criam conexões reais com o
+            público.</p>
+        <h2 class="values__title">Nossos valores:</h2>
+        <ol class="values__list">
+            <li class="values__list__item">Criatividade com propósito: cada peça criada tem um objetivo claro e
+                mensurável.</li>
+            <li class="values__list__item">Transparência: comunicação aberta, honesta e alinhada em todas as etapas do
+                projeto.</li>
+            <li class="values__list__item">Resultado: foco em entregar valor e crescimento para o seu negócio.</li>
+            <li class="values__list__item">Parceria: enxergamos nossos clientes como parceiros de longo prazo.</li>
+            <li class="values__list__item">Inovação constante: estamos sempre atentos às tendências para manter sua marca
+                atual e competitiva.</li>
+        </ol>
+    </section>
+
+
+    <section class="services">
+        <div class="service__description">
+            <h2>Nossos serviços</h2>
+            <p>Oferecemos soluções completas para posicionar sua marca com força no mundo digital e offline.</p>
+        </div>
+        <div class="service__design card">
+            <strong>Design Gráfico</strong>
+            <p class="margin-top-20">Criação de peças visuais que comunicam com clareza e impacto: posts para redes
+                sociais,
+                apresentações, folders, catálogos, anúncios e muito mais.</p>
+        </div>
+        <div class="service__dev card">
+            <strong>Desenvolvimento Web</strong>
+            <p class="margin-top-20" class="margin-top-20">Planejamento, design e desenvolvimento de sites modernos,
+                responsivos e otimizados para conversão, do
+                institucional à landing page de campanhas.</p>
+        </div>
+        <div class="service__braning card">
+            <strong>Branding & Identidade Visual</strong>
+            <p class="margin-top-20">Construção e fortalecimento de marcas: criação de logotipo, paleta de cores,
+                tipografia, manual de
+                marca e todo o universo visual da sua empresa.</p>
+        </div>
+        <div class="service__social card">
+            <strong>Social Media & Conteúdo</strong>
+            <p class="margin-top-20">Planejamento, criação e gestão de conteúdo para redes sociais, com foco em
+                engajamento,
+                posicionamento de marca e geração de oportunidades de negócio.</p>
+        </div>
+        <div class="service__strategy card">
+            <strong>Estratégia Digital & Performance</strong>
+            <p class="margin-top-20">Planejamento de campanhas, anúncios online (Google, Meta Ads), análise de dados e
+                otimização para
+                aumentar o alcance e o retorno sobre investimento.</p>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="testimony__title">O que dizem nossos clientes</h2>
+
+        <article class="testimony">
+            <blockquote>
+                <p>Depois que começamos a trabalhar com a NEXUS CRIATIVO, nossa presença digital mudou completamente. O
+                    novo site e as campanhas nas redes sociais trouxeram muito mais credibilidade e novos clientes.</p>
+                <footer>
+                    <b>Ana Paula Martins</b>, CEO da Lumina Consultoria
+                </footer>
+            </blockquote>
+        </article>
+
+        <article class="testimony">
+            <blockquote>
+                <p>A equipe da NEXUS entendeu exatamente o que eu queria para a identidade da minha marca. Hoje temos
+                    uma comunicação visual consistente e profissional, que faz diferença em cada contato com o cliente.
+                </p>
+                <footer>
+                    <b>Ricardo Souza</b>, Fundador da RS Tech Solutions
+                </footer>
+            </blockquote>
+        </article>
+
+        <article class="testimony">
+            <blockquote>
+                <p>Desde o primeiro briefing até a entrega final, o atendimento foi impecável. A combinação de
+                    criatividade e estratégia nos ajudou a alcançar resultados acima do esperado nas campanhas.</p>
+                <footer>
+                    <b>Mariana Costa</b>, Diretora de Marketing da VerdeViva Alimentos
+                </footer>
+            </blockquote>
+        </article>
+
+        <article class="testimony">
+            <blockquote>
+                <p>Eles não entregam só peças bonitas, entregam soluções. A NEXUS CRIATIVO virou um parceiro essencial
+                    no crescimento do nosso negócio.</p>
+                <footer>
+                    <b>João Henrique</b>, Sócio da Urban Fit Studios
+                </footer>
+            </blockquote>
+        </article>
+    </section>
+
+    <section class="contact">
+        <h2 class="contact__title">Fale com a NEXUS CRIATIVO</h2>
+
+        <p class="contact__text">Pronto para conectar suas ideias a resultados reais? Fale com a nossa equipe e descubra
+            como podemos ajudar a
+            levar sua marca para o próximo nível.</p>
+
+        <div class="contact__info__form">
+            <div class="contact__info">
+                <p>Endereço:</p>
+                <address>
+                    Rua da Inovação, 123
+                </address>
+                <address>Centro Criativo
+                    São Paulo</address>
+                <address>SP, Brasil</address>
+                <p>Telefone / WhatsApp:</p>
+                <p>(11) 90000‑0000</p>
+                <p>E-mail:</p>
+                <p> contato@nexuscriativo.com.br</p>
+            </div>
+
+
+            <form class="form">
+                <div class="input__group">
+                    <label class="label" for="name">Nome completo</label>
+                    <input class="input" type="text" name="name">
+                </div>
+
+                <div class="input__group">
+                    <label class="label" for="mail">E-mail</label>
+                    <input class="input" type="email" name="mail">
+                </div>
+
+                <div class="input__group">
+                    <label class="label" for="phone">Telefone / WhatsApp</label>
+                    <input class="input" type="tel" name="phone">
+                </div>
+
+                <div class="input__group">
+                    <label class="label" for="enterprise">Empresa</label>
+                    <input class="input" type="text" name="enterprise">
+                </div>
+
+                <div class="input__group">
+                    <label class="label" for="subject">Assunto</label>
+                    <input class="input" type="text" name="subject">
+                </div>
+
+                <div class="input__group">
+                    <label class="label" for="message">Mensagem</label>
+                    <textarea class="input textarea" name="message"></textarea>
+                </div>
+
+            </form>
+        </div>
+
+
+        <span class="span">Responderemos o mais rápido possível para entender sua necessidade e indicar a melhor solução para o seu
+            projeto.</span>
+    </section>
+
+    <footer class="footer">
+        &copy; Daniel Tsuzuki - 2025
+    </footer>
+
+</body>
+
+</html>

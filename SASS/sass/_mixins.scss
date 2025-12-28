@@ -1,0 +1,9 @@
+@mixin displayFlexSpaceBetween() {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin displayFlexDirectionColumn() {
+    display: flex;
+    flex-direction: column;
+}

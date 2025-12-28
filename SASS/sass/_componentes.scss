@@ -1,0 +1,57 @@
+@use 'mixins';
+@use 'variaveis';
+
+.home__buttom {
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-bottom: variaveis.$spaceDefault;
+}
+
+.home__buttom--action {
+    background-color: variaveis.$colorButtonAction;
+    border: 1px solid variaveis.$colorborderAction;
+    color: variaveis.$colorTextButtons;
+}
+
+.home__buttom--contact {
+    background-color: variaveis.$colorButtonContact;
+    border: 1px solid variaveis.$colorButtonContact;
+    color: variaveis.$colorTextButtons;
+}
+
+.card {
+    border: 1px solid variaveis.$colorBorderShadown;
+    box-shadow: 0 0 10px variaveis.$colorShadown;
+    border-radius: variaveis.$spaceDefault;
+    padding: 40px;
+    margin: variaveis.$spaceDefault;
+    text-align: center;
+}
+
+.form {
+    width: 50%;
+    border: 1px solid variaveis.$colorForm;
+    border-radius: 10px;
+    padding: variaveis.$spaceDefault;
+    background-color: variaveis.$colorForm;
+    color: variaveis.$colorWhite;
+    font-weight: 600;
+}
+
+.input__group {
+    margin-bottom: 10px;
+    @include mixins.displayFlexSpaceBetween;
+}
+
+.input {
+    max-width: 100%;
+    padding: 10px;
+    width: 70%;
+    margin-left: 10px;
+}
+
+.textarea {
+    resize: none;
+    height: 100px;
+}
