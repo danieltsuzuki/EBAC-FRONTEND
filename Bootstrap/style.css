@@ -1,0 +1,9 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box !important;
+}
+
+
+.text-home {
+    color: rgb(220, 233, 44);
+}
