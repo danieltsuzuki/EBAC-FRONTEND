@@ -1,0 +1,20 @@
+.font-card--product {
+    font-size: 20px;
+}
+
+.div-buttom-remove {
+    display: flex;
+    justify-content: end;
+}
+
+.buttom-remove {
+    background-color: rgb(230, 22, 22);
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.buttom-remove:hover {
+    background-color: rgb(170, 34, 34);
+}
+
