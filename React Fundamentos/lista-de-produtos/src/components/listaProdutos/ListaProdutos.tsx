@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { TypeProduto, TypeProdutoSemId } from "../../types/TypeProduto";
 import FormularioProduto from "./fomularioProduto/FormularioProduto";
 import Produto from "./produto/Produto";
@@ -19,12 +19,14 @@ function ListaProdutos() {
             };
     
             setProdutos([...produtos, produtoComId])
-        }
-    
-        function handlerDeletarProduto(id: number) {
-            const produtosFiltrados = produtos.filter(produto => produto.id !== id);
-            setProdutos(produtosFiltrados);
-        }
+        };
+
+        const handlerDeletarProduto = useCallback(
+            (id: number) => {
+                const produtosFiltrados = produtos.filter(produto => produto.id !== id);
+                setProdutos(produtosFiltrados);
+            }, []
+        );
     
         useEffect(() => {
             setTimeout(() => {

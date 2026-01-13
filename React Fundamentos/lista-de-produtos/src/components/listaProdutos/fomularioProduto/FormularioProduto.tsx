@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { memo, useEffect, useRef, useState, type FormEvent } from "react";
 import IMAGEM from '../../../assets/img/sem-imagem.jpg'
 import type { TypeFormularioProdutoProps } from "../../../types/TypeProduto";
 
@@ -30,6 +30,7 @@ function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoPro
         setNome('');
         setPreco(0);
         setDescricao('');
+        setImagem('');
     }
 
     function mostrarErro(id: string, mensagem: string) {
@@ -68,12 +69,23 @@ function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoPro
         return valido;
     }
 
+    
+    const inputRef = useRef<HTMLInputElement | null>(null);
+
+    const handleFormFocus = () => {
+        inputRef.current?.focus();
+    }
+
+    useEffect(() => {
+        handleFormFocus();
+    }, []);
 
     return (
         <form className="border rounded-xl max-w-2/3 mx-auto py-5 px-2" onSubmit={handleSubmit}>
             <div className="grid grid-cols-3 my-2 px-2">
                 <label htmlFor="nomeProduto">Nome</label>
-                <input className="border col-span-2 ps-1" type="text" onChange={(e) => setNome(e.target.value)} id="nomeProduto" value={nome} />
+                <input className="border col-span-2 ps-1" type="text" onChange={(e) => setNome(e.target.value)} 
+                id="nomeProduto" value={nome}/>
             </div>
             <div className="grid grid-cols-3 my-2 px-2">
                 <span></span>
@@ -82,7 +94,8 @@ function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoPro
 
             <div className="grid grid-cols-3 my-2 px-2">
                 <label htmlFor="precoProduto">Preço</label>
-                <input className="border col-span-2  ps-1" type="text" onChange={(e) => setPreco(Number(e.target.value))} id="precoProduto" value={preco} />
+                <input className="border col-span-2  ps-1" type="text" onChange={(e) => setPreco(Number(e.target.value))} 
+                id="precoProduto" value={preco}/>
             </div>
             <div className="grid grid-cols-3 my-2 px-2">
                 <span></span>
@@ -91,21 +104,23 @@ function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoPro
 
             <div className="grid grid-cols-3 my-2 px-2">
                 <label htmlFor="linkImagem">Imagem - link</label>
-                <input className="border col-span-2 ps-1" type="text" id="linkImagem" onChange={(e) => setImagem(e.target.value)} value={imagem} />
+                <input className="border col-span-2 ps-1" type="text" id="linkImagem" onChange={(e) => setImagem(e.target.value)} 
+                value={imagem}/>
             </div>
 
             <div className="grid grid-cols-3 my-2 px-2">
                 <label htmlFor="descricaoProduto">Descrição</label>
-                <textarea className="border col-span-2 resize-none ps-1" onChange={(e) => setDescricao(e.target.value)} id="descricaoProduto" value={descricao} />
+                <textarea className="border col-span-2 resize-none ps-1" onChange={(e) => setDescricao(e.target.value)} 
+                id="descricaoProduto" value={descricao}/>
             </div>
             <div className="grid grid-cols-3 my-2 px-2">
                 <span></span>
                 <span className="hidden text-red-500 font-bold col-span-2 text-start text-sm" id="descricaoProdutoError"></span>
             </div>
 
-            <button className="rounded-xl shadow-md shadow-green-800 py-1 px-4 font-bold bg-green-400 hover:bg-green-700 my-2" type="submit">Cadastrar</button>
+            <button className="rounded-xl shadow-md shadow-green-800 py-1 px-4 font-bold bg-green-400 hover:bg-green-700 my-2" type="submit" onClick={handleFormFocus}>Cadastrar</button>
         </form>
     );
 }
 
-export default FormularioProduto;
+export default memo(FormularioProduto);

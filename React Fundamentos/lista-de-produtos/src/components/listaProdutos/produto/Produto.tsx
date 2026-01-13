@@ -1,3 +1,4 @@
+import { memo } from "react";
 import type { TypeProdutoProps } from "../../../types/TypeProduto";
 
 function Produto({ produto, handlerDeletarProduto }: TypeProdutoProps) {
@@ -19,4 +20,4 @@ function Produto({ produto, handlerDeletarProduto }: TypeProdutoProps) {
     );
 }
 
-export default Produto;
+export default memo(Produto);
