@@ -1,14 +1,15 @@
-import { memo, useEffect, useRef, useState, type FormEvent } from "react";
+import { memo, useEffect, useRef, type FormEvent } from "react";
 import IMAGEM from '../../../assets/img/sem-imagem.jpg'
 import type { TypeFormularioProdutoProps } from "../../../types/TypeProduto";
+import { useInput } from "../../../hooks/useInput";
 
 
 function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoProps) {
 
-    const [nome, setNome] = useState<string>('');
-    const [preco, setPreco] = useState<number>(0);
-    const [descricao, setDescricao] = useState<string>('');
-    const [imagem, setImagem] = useState<string>('');
+    const nome = useInput("");
+    const preco = useInput("");
+    const descricao = useInput("");
+    const imagem = useInput("");
 
     function handleSubmit(e: FormEvent) {
         e.preventDefault();
@@ -16,21 +17,15 @@ function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoPro
         const ok = validarFormulario();
         if (!ok) return;
 
-        if (imagem.length === 0) {
-            handlerAdicionarProduto({nome: nome, preco: preco, imagem: IMAGEM, descricao: descricao });
-            limparUseStates();
-            return;
-        }
-
-        handlerAdicionarProduto({ nome, preco, imagem, descricao });
-        limparUseStates();
+        handlerAdicionarProduto({ nome: nome.valor, preco: Number(preco.valor), imagem: imagem.valor, descricao: descricao.valor });
+        limparInputs();
     }
 
-    const limparUseStates = () => {
-        setNome('');
-        setPreco(0);
-        setDescricao('');
-        setImagem('');
+    const limparInputs = () => {
+        nome.limpar();
+        preco.limpar();
+        descricao.limpar();
+        imagem.limpar()
     }
 
     function mostrarErro(id: string, mensagem: string) {
@@ -51,19 +46,31 @@ function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoPro
     function validarFormulario(): boolean {
         let valido = true;
 
-        if (nome.trim().length === 0) {
+        if (nome.valor?.trim().length === 0) {
             mostrarErro("nomeProdutoError", "Nome obrigatório");
             valido = false;
+            nome.limpar()
         }
 
-        if (Number.isNaN(preco) || preco <= 0) {
+        if (Number.isNaN(Number(preco.valor))) {
+            mostrarErro("precoProdutoError", "Preço inválido");
+            valido = false;
+            preco.limpar()
+        }
+
+        if (Number(preco.valor) <= 0) {
             mostrarErro("precoProdutoError", "Preço não pode ser menor ou igual a 0");
             valido = false;
         }
 
-        if (descricao.trim().length === 0) {
+        if (descricao.valor?.trim().length === 0) {
             mostrarErro("descricaoProdutoError", "Descrição obrigatória");
             valido = false;
+            descricao.limpar()
+        }
+
+        if (imagem.valor?.trim().length === 0) {
+            imagem.valor = IMAGEM;
         }
 
         return valido;
@@ -84,8 +91,8 @@ function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoPro
         <form className="border rounded-xl max-w-2/3 mx-auto py-5 px-2" onSubmit={handleSubmit}>
             <div className="grid grid-cols-3 my-2 px-2">
                 <label htmlFor="nomeProduto">Nome</label>
-                <input className="border col-span-2 ps-1" type="text" onChange={(e) => setNome(e.target.value)} 
-                id="nomeProduto" value={nome}/>
+                <input className="border col-span-2 ps-1" type="text" onChange={nome.onChange} 
+                id="nomeProduto" value={nome.valor}/>
             </div>
             <div className="grid grid-cols-3 my-2 px-2">
                 <span></span>
@@ -94,8 +101,8 @@ function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoPro
 
             <div className="grid grid-cols-3 my-2 px-2">
                 <label htmlFor="precoProduto">Preço</label>
-                <input className="border col-span-2  ps-1" type="text" onChange={(e) => setPreco(Number(e.target.value))} 
-                id="precoProduto" value={preco}/>
+                <input className="border col-span-2  ps-1" type="text" onChange={preco.onChange} 
+                id="precoProduto" value={preco.valor}/>
             </div>
             <div className="grid grid-cols-3 my-2 px-2">
                 <span></span>
@@ -104,14 +111,14 @@ function FormularioProduto({ handlerAdicionarProduto }: TypeFormularioProdutoPro
 
             <div className="grid grid-cols-3 my-2 px-2">
                 <label htmlFor="linkImagem">Imagem - link</label>
-                <input className="border col-span-2 ps-1" type="text" id="linkImagem" onChange={(e) => setImagem(e.target.value)} 
-                value={imagem}/>
+                <input className="border col-span-2 ps-1" type="text" id="linkImagem" onChange={imagem.onChange} 
+                value={imagem.valor}/>
             </div>
 
             <div className="grid grid-cols-3 my-2 px-2">
                 <label htmlFor="descricaoProduto">Descrição</label>
-                <textarea className="border col-span-2 resize-none ps-1" onChange={(e) => setDescricao(e.target.value)} 
-                id="descricaoProduto" value={descricao}/>
+                <textarea className="border col-span-2 resize-none ps-1" onChange={descricao.onChange} 
+                id="descricaoProduto" value={descricao.valor}/>
             </div>
             <div className="grid grid-cols-3 my-2 px-2">
                 <span></span>
