@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components'
 
 const CardProduto = styled.div`
@@ -22,7 +23,7 @@ const Nome = styled.h2`
 const Preco = styled.p`
   color: green;
   box-sizing: border-box;
-  font-weight: 500;
+  font-weight: 700;
   padding: 0;
 `;
 
@@ -39,7 +40,9 @@ const Bottao = styled.button`
   }
 `
 
-const produtos = [
+function App() {
+
+  const [produtos, setProdutos] = useState([
     {
       "nome": "Arroz 5kg",
       "preco": 30.00,
@@ -48,25 +51,33 @@ const produtos = [
     {
       "nome": "Refrigerante 1L",
       "preco": 7.99,
-      "adicionado": true
+      "adicionado": false
     }
-  ];
+  ]);
 
-function App() {
+const adicionar = (produto) => {
+  setProdutos(prev => 
+    prev.map(p =>
+      p === produto
+        ? { ...p, adicionado: true }
+        : p
+    ))
+}
+
   return (
     <>
       {
-        produtos.map((p, index) => 
+        produtos.map((p, index) => (
           <CardProduto key={index}>  
             <Nome>{p.nome}</Nome>
 
-            <preco>R$ {p.preco.toFixed(2)}</preco>
+            <Preco>R$ {p.preco.toFixed(2)}</Preco>
 
-            <Bottao adicionado={p.adicionado}>
-              Adicionar ao carrinho
+            <Bottao adicionado={p.adicionado} onClick={() => adicionar(p)}>
+              {p.adicionado ? "Adicionado" : "Adicionar ao carrinho"}
             </Bottao>
           </CardProduto>
-        )
+        ))
       }
       
     </>
