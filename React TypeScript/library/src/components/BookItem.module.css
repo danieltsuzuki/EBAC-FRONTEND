@@ -1,0 +1,30 @@
+li {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 800px;
+    padding: 8px;
+    display: flex;
+}
+
+.info_card {
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
