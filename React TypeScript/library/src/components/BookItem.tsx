@@ -1,4 +1,4 @@
-import type { BookType } from "../types/Book";
+import type { BookType, InsertBookType } from "../types/Book";
 import styles from "./BookItem.module.css";
 import pencil from "../assets/pencil.svg";
 import trash from "../assets/trash.svg";
@@ -7,7 +7,7 @@ import styled from "styled-components";
 type Props = {
     book: BookType,
     deleteBook: (id: string) => void,
-    updateBookStatus: (id: string, newBook: BookType) => void
+    updateBookStatus: (id: string, newBook: InsertBookType) => void
 }
 
 const Button = styled.button`
@@ -33,8 +33,8 @@ const Image = styled.img`
 
 function BookItem({book, deleteBook, updateBookStatus}: Props) {
 
-    const handleUpdate = (id: string, book: BookType) => {
-        const newBook: BookType = {...book, _id: undefined, status: book.status === "Não lido" ? "Lido" : "Não lido" };
+    const handleUpdate = (id: string, book: InsertBookType) => {
+        const newBook: InsertBookType = {...book, status: book.status === "Não lido" ? "Lido" : "Não lido" };
         updateBookStatus(id, newBook);
     }
 

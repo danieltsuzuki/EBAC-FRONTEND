@@ -1,10 +1,10 @@
-import type { BookType } from "../types/Book";
+import type { BookType, InsertBookType } from "../types/Book";
 import BookItem from "./BookItem";
 
 type Props = {
     books: BookType[]
     deleteBook: (id: string) => void,
-    updateBookStatus: (id: string, newBook: BookType) => void
+    updateBookStatus: (id: string, newBook: InsertBookType) => void
 }
 
 function BookList({books, deleteBook, updateBookStatus}: Props) {

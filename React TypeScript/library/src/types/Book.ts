@@ -7,7 +7,7 @@ export type BookType = {
     author: string
 }
 
-export type CreateBookType = {
+export type InsertBookType = {
     title: string,
     status: BookStatus,
     author: string

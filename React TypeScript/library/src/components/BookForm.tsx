@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import type { BookStatus, CreateBookType } from "../types/Book";
+import type { BookStatus, InsertBookType } from "../types/Book";
 import styles from "./BookForm.module.css";
 import { useForm } from "react-hook-form";
 
 type Props = {
-    addBook: (book: CreateBookType) => void
+    addBook: (book: InsertBookType) => void,
 }
 
 type FormData = {
-    book: CreateBookType
+    book: InsertBookType
 };
 
 const Span = styled.span`

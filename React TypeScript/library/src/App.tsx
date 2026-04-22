@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react'
-import type { BookType, CreateBookType } from './types/Book'
+import type { BookType, InsertBookType } from './types/Book'
 import BookForm from './components/BookForm'
 import BookList from './components/BookList'
-import Notification from './components/Notification'
 import { bookService } from './services/BookService'
-
 
 function App() {
   const [books, setBooks] = useState<BookType[]>([])
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -22,7 +19,7 @@ function App() {
     fetchBooks();
   }, [])
 
-  const addBook = async(book: CreateBookType): Promise<void> => {
+  const addBook = async(book: InsertBookType): Promise<void> => {
     try {
       const data = await bookService.create(book);
       setBooks(prev => [...prev, data])
@@ -40,7 +37,7 @@ function App() {
     }
   }
 
-  const updateBookStatus = async (id: string, newBook: BookType): Promise<void> => {
+  const updateBookStatus = async (id: string, newBook: InsertBookType): Promise<void> => {
     try {
       await bookService.update(id, newBook);
       setBooks(prev => prev.map(book => book._id === id ? {...newBook, _id: id} : book ))
@@ -53,7 +50,6 @@ function App() {
     <>
       <BookForm addBook={addBook}/>
       <BookList books={books} deleteBook={deleteBook} updateBookStatus={updateBookStatus}/>
-      <Notification message={"asd"} setOpen={setOpen} open={open}/>
     </>
   )
 }
