@@ -1,0 +1,170 @@
+[
+    {
+        "slug": "Introducao-ao-Next-js",
+        "titulo": "Introdução ao Next.js",
+        "autor": "Daniel Tsuzuki",
+        "dataPublicacao": "2026-05-13",
+        "conteudoArtigo": "Next.js é um framework baseado em React que se tornou extremamente popular no desenvolvimento de aplicações web modernas. Ele oferece recursos avançados como renderização no servidor (SSR), geração de páginas estáticas (SSG), roteamento automático e otimização de performance. Um dos principais diferenciais do Next.js é sua facilidade para criar aplicações rápidas e escaláveis, reduzindo a complexidade de configuração normalmente encontrada em projetos React tradicionais. Além disso, o framework possui integração nativa com TypeScript, API Routes e ferramentas modernas de desenvolvimento. Empresas de diversos tamanhos utilizam Next.js para construir aplicações performáticas, melhorando SEO e experiência do usuário. Com o crescimento do ecossistema React, aprender Next.js tornou-se uma habilidade importante para desenvolvedores frontend e full stack.",
+        "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    },
+    {
+        "slug": "Aprendendo-Spring-Boot",
+        "titulo": "Aprendendo Spring Boot",
+        "autor": "Maria Silva",
+        "dataPublicacao": "2026-05-12",
+        "conteudoArtigo": "Spring Boot é um dos frameworks Java mais utilizados para desenvolvimento backend. Ele simplifica a criação de APIs REST, microsserviços e aplicações corporativas através de configurações automáticas e integração com o ecossistema Spring. Antes do Spring Boot, aplicações Java exigiam muitas configurações manuais, aumentando a complexidade do projeto. Com o framework, é possível iniciar aplicações rapidamente utilizando starters prontos e servidores embarcados como Tomcat. Outro benefício importante é a integração com bancos de dados, autenticação, mensageria e ferramentas de monitoramento. O Spring Boot também é amplamente utilizado em arquiteturas de microsserviços devido à sua compatibilidade com Spring Cloud. Desenvolvedores Java que desejam atuar em grandes sistemas corporativos geralmente precisam dominar Spring Boot.",
+        "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+    },
+    {
+        "slug": "Flutter-para-Aplicacoes-Mobile",
+        "titulo": "Flutter para Aplicações Mobile",
+        "autor": "Carlos Souza",
+        "dataPublicacao": "2026-05-11",
+        "conteudoArtigo": "Flutter é um framework criado pelo Google para desenvolvimento de aplicações multiplataforma. Com ele, é possível criar aplicativos Android, iOS, Web e Desktop utilizando uma única base de código escrita em Dart. O principal objetivo do Flutter é acelerar o desenvolvimento e reduzir custos de manutenção. O framework possui widgets altamente personalizáveis e uma excelente performance, pois utiliza renderização própria ao invés de depender dos componentes nativos do sistema operacional. Outro destaque é o Hot Reload, recurso que permite visualizar alterações instantaneamente durante o desenvolvimento. Flutter é muito utilizado por startups e empresas que desejam lançar produtos rapidamente em múltiplas plataformas. Nos últimos anos, sua comunidade cresceu bastante, tornando-o uma das principais opções para desenvolvimento mobile moderno.",
+        "imageUrl": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935"
+    },
+    {
+        "slug": "Introducao-ao-Docker",
+        "titulo": "Introdução ao Docker",
+        "autor": "Ana Costa",
+        "dataPublicacao": "2026-05-10",
+        "conteudoArtigo": "Docker revolucionou a forma como aplicações são distribuídas e executadas. Utilizando containers, ele permite empacotar aplicações junto com todas as suas dependências, garantindo que funcionem da mesma forma em qualquer ambiente. Antes do Docker, problemas de compatibilidade entre ambientes de desenvolvimento e produção eram muito comuns. Com containers, tornou-se possível criar ambientes isolados, leves e altamente portáveis. Docker também facilita integração contínua, escalabilidade e implantação em nuvem. Empresas utilizam Docker em conjunto com Kubernetes para orquestração de aplicações em larga escala. Para desenvolvedores modernos, aprender Docker é essencial, principalmente em projetos que utilizam microsserviços e pipelines de CI/CD.",
+        "imageUrl": "https://images.unsplash.com/photo-1605745341112-85968b19335b"
+    },
+    {
+        "slug": "Conceitos-de-Microsservicos",
+        "titulo": "Conceitos de Microsserviços",
+        "autor": "Pedro Lima",
+        "dataPublicacao": "2026-05-09",
+        "conteudoArtigo": "A arquitetura de microsserviços divide sistemas grandes em pequenos serviços independentes. Cada serviço possui responsabilidade específica e pode ser desenvolvido, implantado e escalado separadamente. Essa abordagem aumenta a flexibilidade do sistema e facilita manutenção em aplicações complexas. Microsserviços geralmente se comunicam através de APIs REST ou mensageria. Empresas como Netflix e Amazon popularizaram esse modelo devido à necessidade de alta escalabilidade. Apesar das vantagens, microsserviços também trazem desafios, como monitoramento distribuído, gerenciamento de comunicação e consistência de dados. Por isso, é importante utilizar boas práticas arquiteturais e ferramentas adequadas para observabilidade e automação.",
+        "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31"
+    },
+    {
+        "slug": "Guia-Completo-de-TypeScript",
+        "titulo": "Guia Completo de TypeScript",
+        "autor": "Juliana Rocha",
+        "dataPublicacao": "2026-05-08",
+        "conteudoArtigo": "TypeScript é uma linguagem desenvolvida pela Microsoft que adiciona tipagem estática ao JavaScript. Seu principal objetivo é tornar aplicações maiores mais seguras e fáceis de manter. Em projetos complexos, erros de tipagem podem causar falhas difíceis de identificar, e o TypeScript ajuda justamente a evitar esse tipo de problema ainda durante o desenvolvimento. A linguagem é totalmente compatível com JavaScript moderno e permite integração gradual em projetos existentes. Frameworks populares como Angular e Next.js possuem excelente suporte ao TypeScript, tornando-o praticamente um padrão no mercado frontend atual. Além disso, IDEs conseguem fornecer autocomplete avançado, refatoração automática e melhor navegação no código. Muitas empresas adotam TypeScript para melhorar produtividade e reduzir bugs em produção. Desenvolvedores que aprendem TypeScript costumam ter mais facilidade para trabalhar em aplicações escaláveis e projetos profissionais de grande porte.",
+        "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+    },
+    {
+        "slug": "Banco-de-Dados-MySQL-na-Pratica",
+        "titulo": "Banco de Dados MySQL na Prática",
+        "autor": "Fernando Alves",
+        "dataPublicacao": "2026-05-07",
+        "conteudoArtigo": "MySQL é um dos bancos de dados relacionais mais utilizados no mundo. Ele é amplamente adotado em aplicações web, sistemas corporativos e plataformas de grande escala. Sua popularidade se deve à estabilidade, facilidade de uso e excelente desempenho em consultas relacionais. O MySQL utiliza SQL como linguagem principal para manipulação de dados, permitindo criar tabelas, relacionamentos, índices e consultas complexas. Além disso, o banco oferece suporte a transações, controle de permissões e replicação de dados. Muitos frameworks modernos possuem integração nativa com MySQL, facilitando o desenvolvimento backend. Em ambientes corporativos, é comum utilizar MySQL junto com Java, PHP ou Node.js. Aprender modelagem relacional e otimização de queries é essencial para aproveitar todo o potencial da ferramenta. Mesmo com o crescimento dos bancos NoSQL, o MySQL continua sendo uma escolha sólida para aplicações que exigem consistência e integridade de dados.",
+        "imageUrl": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d"
+    },
+    {
+        "slug": "Introducao-ao-Kubernetes",
+        "titulo": "Introdução ao Kubernetes",
+        "autor": "Paula Mendes",
+        "dataPublicacao": "2026-05-06",
+        "conteudoArtigo": "Kubernetes é uma plataforma de orquestração de containers criada originalmente pelo Google. Seu objetivo é automatizar implantação, escalabilidade e gerenciamento de aplicações distribuídas. Com o crescimento do uso de Docker e microsserviços, surgiu a necessidade de ferramentas capazes de administrar centenas de containers simultaneamente. Kubernetes resolve esse problema através de recursos como Pods, Deployments, Services e Ingress. Além disso, ele permite escalabilidade automática baseada em consumo de CPU e memória. Empresas que trabalham com aplicações em nuvem utilizam Kubernetes para garantir alta disponibilidade e resiliência dos sistemas. Apesar da curva de aprendizado relativamente alta, dominar Kubernetes tornou-se uma habilidade extremamente valorizada no mercado DevOps e Cloud Computing.",
+        "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+    },
+    {
+        "slug": "Criando-APIs-REST-Modernas",
+        "titulo": "Criando APIs REST Modernas",
+        "autor": "Lucas Martins",
+        "dataPublicacao": "2026-05-05",
+        "conteudoArtigo": "APIs REST são fundamentais para comunicação entre aplicações modernas. Elas utilizam protocolos HTTP para permitir troca de informações entre frontend, backend e serviços externos. Uma API REST bem construída deve seguir princípios como padronização de rotas, utilização correta dos métodos HTTP e respostas consistentes. Atualmente, praticamente todos os sistemas modernos dependem de APIs para integração com aplicativos móveis, plataformas web e microsserviços. Frameworks como Spring Boot, Express e FastAPI simplificam bastante a criação dessas interfaces. Outro ponto importante é a documentação da API, normalmente feita com Swagger ou OpenAPI. Segurança também é essencial, utilizando autenticação JWT, HTTPS e controle de permissões. Desenvolvedores backend precisam dominar APIs REST para atuar em aplicações modernas e escaláveis.",
+        "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+    },
+    {
+        "slug": "Autenticacao-com-JWT",
+        "titulo": "Autenticação com JWT",
+        "autor": "Rafael Gomes",
+        "dataPublicacao": "2026-05-04",
+        "conteudoArtigo": "JWT, ou JSON Web Token, é uma tecnologia amplamente utilizada para autenticação em aplicações modernas. O token contém informações codificadas sobre o usuário e pode ser utilizado para validar sessões sem necessidade de armazenar estado no servidor. Isso torna aplicações mais escaláveis e eficientes. Em sistemas web modernos, JWT costuma ser utilizado junto com APIs REST e microsserviços. O processo geralmente envolve login do usuário, geração do token e envio em cada requisição HTTP através do cabeçalho Authorization. Apesar das vantagens, é importante tomar cuidados com segurança, utilizando HTTPS, tempo de expiração adequado e armazenamento seguro no frontend. JWT tornou-se padrão em aplicações modernas devido à sua simplicidade e compatibilidade com diferentes tecnologias.",
+        "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3"
+    },
+    {
+        "slug": "Fundamentos-de-React",
+        "titulo": "Fundamentos de React",
+        "autor": "Fernanda Ribeiro",
+        "dataPublicacao": "2026-05-03",
+        "conteudoArtigo": "React é uma biblioteca JavaScript criada pelo Facebook para construção de interfaces de usuário. Seu principal diferencial é o uso de componentes reutilizáveis, permitindo criar aplicações complexas de forma organizada. React utiliza um DOM virtual que melhora a performance das atualizações de tela. Com o crescimento das aplicações SPA, React tornou-se uma das tecnologias frontend mais populares do mercado. Além disso, possui um ecossistema extremamente amplo, incluindo ferramentas como Redux, React Router e Next.js. Hooks modernos como useState e useEffect simplificaram bastante o gerenciamento de estado e ciclo de vida dos componentes. Desenvolvedores que aprendem React conseguem criar interfaces rápidas, dinâmicas e altamente escaláveis.",
+        "imageUrl": "https://images.unsplash.com/photo-1633356122544-f134324a6cee"
+    },
+    {
+        "slug": "Programacao-Assincrona-em-JavaScript",
+        "titulo": "Programação Assíncrona em JavaScript",
+        "autor": "Bruno Oliveira",
+        "dataPublicacao": "2026-05-02",
+        "conteudoArtigo": "JavaScript possui um modelo assíncrono extremamente importante para aplicações web modernas. Operações como chamadas HTTP, leitura de arquivos e timers não devem bloquear a execução principal da aplicação. Inicialmente, callbacks eram amplamente utilizados, mas acabavam gerando códigos difíceis de manter. Com a evolução da linguagem, Promises e async/await simplificaram bastante o desenvolvimento assíncrono. Hoje, praticamente todo desenvolvedor JavaScript precisa entender esses conceitos para trabalhar com APIs, bancos de dados e aplicações em tempo real. O domínio da programação assíncrona melhora performance e experiência do usuário em aplicações frontend e backend.",
+        "imageUrl": "https://images.unsplash.com/photo-1516116216624-53e697fedbea"
+    },
+    {
+        "slug": "Introducao-ao-Linux",
+        "titulo": "Introdução ao Linux",
+        "autor": "João Pereira",
+        "dataPublicacao": "2026-05-01",
+        "conteudoArtigo": "Linux é um sistema operacional open source amplamente utilizado em servidores, cloud computing e desenvolvimento de software. Sua estabilidade, segurança e flexibilidade fazem dele uma das principais escolhas para ambientes corporativos. Distribuições como Ubuntu, Debian e CentOS são populares tanto em servidores quanto em desktops. Desenvolvedores frequentemente utilizam Linux devido à facilidade de automação e integração com ferramentas DevOps. Além disso, praticamente toda infraestrutura moderna baseada em containers e cloud roda sobre Linux. Aprender comandos básicos do terminal, gerenciamento de arquivos e permissões é essencial para profissionais de tecnologia.",
+        "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475"
+    },
+    {
+        "slug": "CI/CD-na-Pratica",
+        "titulo": "CI/CD na Prática",
+        "autor": "Camila Santos",
+        "dataPublicacao": "2026-04-30",
+        "conteudoArtigo": "CI/CD significa Integração Contínua e Entrega Contínua. Essas práticas automatizam testes, builds e deploys de aplicações, reduzindo erros humanos e acelerando entregas. Ferramentas como GitHub Actions, GitLab CI e Jenkins são muito utilizadas para criar pipelines automatizados. Em equipes ágeis, CI/CD é fundamental para garantir qualidade e rapidez no desenvolvimento. Além disso, pipelines automatizados facilitam rollback, monitoramento e implantação em múltiplos ambientes. Empresas modernas investem fortemente em automação para aumentar produtividade e confiabilidade das aplicações.",
+        "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+    },
+    {
+        "slug": "Versionamento-com-Git",
+        "titulo": "Versionamento com Git",
+        "autor": "Thiago Barros",
+        "dataPublicacao": "2026-04-29",
+        "conteudoArtigo": "Git é um sistema distribuído de controle de versão criado para facilitar colaboração em projetos de software. Ele permite rastrear alterações no código, criar branches e integrar mudanças de diferentes desenvolvedores. Plataformas como GitHub e GitLab popularizaram ainda mais o uso do Git em equipes modernas. Aprender conceitos como commit, merge, rebase e pull request é essencial para qualquer programador. Além disso, Git facilita recuperação de versões antigas e organização do histórico do projeto. Atualmente, praticamente todas as empresas de tecnologia utilizam Git em seus fluxos de desenvolvimento.",
+        "imageUrl": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb"
+    },
+    {
+        "slug": "Introducao-ao-Node-js",
+        "titulo": "Introdução ao Node.js",
+        "autor": "Aline Castro",
+        "dataPublicacao": "2026-04-28",
+        "conteudoArtigo": "Node.js permite executar JavaScript fora do navegador, possibilitando desenvolvimento backend utilizando a mesma linguagem do frontend. Sua arquitetura baseada em eventos e I/O não bloqueante oferece excelente desempenho para aplicações em tempo real. Node.js é muito utilizado em APIs REST, sistemas de chat e aplicações escaláveis. Frameworks como Express.js ajudam a estruturar projetos backend rapidamente. Além disso, o npm fornece um gigantesco ecossistema de bibliotecas reutilizáveis. Desenvolvedores full stack frequentemente escolhem Node.js para unificar tecnologias entre frontend e backend.",
+        "imageUrl": "https://images.unsplash.com/photo-1627398242454-45a1465c2479"
+    },
+    {
+        "slug": "Clean-Code-em-Java",
+        "titulo": "Clean Code em Java",
+        "autor": "Marcelo Dias",
+        "dataPublicacao": "2026-04-27",
+        "conteudoArtigo": "Clean Code é um conjunto de boas práticas voltadas para criação de códigos mais legíveis, organizados e fáceis de manter. Em Java, essas práticas incluem nomes descritivos, métodos pequenos, separação de responsabilidades e baixo acoplamento. Sistemas corporativos costumam durar muitos anos, tornando manutenção um fator extremamente importante. Um código mal estruturado pode aumentar custos e dificultar evolução do projeto. Aplicar princípios de Clean Code melhora colaboração entre equipes e reduz ocorrência de bugs. Desenvolvedores experientes valorizam bastante qualidade de código em projetos profissionais.",
+        "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+    },
+    {
+        "slug": "Testes-Unitarios-com-JUnit",
+        "titulo": "Testes Unitários com JUnit",
+        "autor": "Patricia Melo",
+        "dataPublicacao": "2026-04-26",
+        "conteudoArtigo": "JUnit é um framework extremamente popular para testes automatizados em Java. Ele permite validar funcionalidades individuais da aplicação de forma isolada, garantindo maior confiabilidade no código. Testes unitários ajudam a identificar problemas rapidamente durante o desenvolvimento e reduzem riscos em alterações futuras. Em metodologias como TDD, os testes são escritos antes mesmo da implementação. Ferramentas modernas de integração contínua executam testes automaticamente a cada alteração no projeto. Desenvolvedores que dominam testes automatizados conseguem produzir aplicações mais seguras e sustentáveis.",
+        "imageUrl": "https://images.unsplash.com/photo-1516321497487-e288fb19713f"
+    },
+    {
+        "slug": "Introducao-ao-Angular",
+        "titulo": "Introdução ao Angular",
+        "autor": "Felipe Araújo",
+        "dataPublicacao": "2026-04-25",
+        "conteudoArtigo": "Angular é um framework frontend desenvolvido pelo Google para construção de aplicações web robustas. Diferente de bibliotecas mais simples, Angular oferece uma arquitetura completa com injeção de dependência, roteamento e gerenciamento de formulários. O framework utiliza TypeScript como linguagem principal, trazendo tipagem estática e maior organização do projeto. Angular é muito utilizado em aplicações corporativas devido à sua estrutura padronizada e escalabilidade. Além disso, possui excelente integração com RxJS para programação reativa. Empresas de grande porte frequentemente adotam Angular em sistemas internos complexos.",
+        "imageUrl": "https://images.unsplash.com/photo-1509395176047-4a66953fd231"
+    },
+    {
+        "slug": "Arquitetura-DDD",
+        "titulo": "Arquitetura DDD",
+        "autor": "Roberta Lima",
+        "dataPublicacao": "2026-04-24",
+        "conteudoArtigo": "DDD, ou Domain-Driven Design, é uma abordagem arquitetural focada em modelar software de acordo com regras de negócio reais. O objetivo principal é aproximar desenvolvedores e especialistas do domínio para criar sistemas mais alinhados às necessidades da empresa. Conceitos como entidades, agregados, value objects e bounded contexts ajudam a organizar aplicações complexas. DDD é muito utilizado em sistemas corporativos de grande porte, principalmente junto com microsserviços. Embora exija mais planejamento inicial, essa abordagem facilita manutenção e evolução do sistema ao longo do tempo.",
+        "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+    },
+    {
+        "slug": "Introducao-ao-MongoDB",
+        "titulo": "Introdução ao MongoDB",
+        "autor": "Leonardo Vieira",
+        "dataPublicacao": "2026-04-23",
+        "conteudoArtigo": "MongoDB é um banco de dados NoSQL orientado a documentos muito utilizado em aplicações modernas. Diferente dos bancos relacionais tradicionais, ele armazena dados em documentos JSON flexíveis. Essa característica facilita mudanças na estrutura da aplicação sem necessidade de migrações complexas. MongoDB é bastante utilizado em sistemas que exigem alta escalabilidade e grande volume de dados. Além disso, possui integração simples com JavaScript e Node.js, tornando-se popular em aplicações full stack. Apesar das vantagens, é importante entender quando utilizar NoSQL ou bancos relacionais dependendo das necessidades do projeto.",
+        "imageUrl": "https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+    }
+]
