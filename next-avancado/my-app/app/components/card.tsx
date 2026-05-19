@@ -1,4 +1,5 @@
 import { Artigo } from '@/types/artigoType';
+import Image from 'next/image';
 import Link from 'next/link';
 
 type Props = {
@@ -11,10 +12,12 @@ export function Card({ artigo }: Props) {
     return (
         <Link href={`artigos/` + artigo.slug} className="min-w-0">
             <div className="border p-5 rounded-2xl flex flex-col items-center justify-center h-105">
-                <img
+                <Image
                     src={artigo.imageUrl}
                     alt={`Imagem que representa ` + artigo.titulo}
-                    className="h-30 mb-5"
+                    className="mb-5"
+                    width={200}
+                    height={120}
                 />
                 <h2 className="text-lg">{artigo.titulo}</h2>
                 <p className="mx-2 text-justify">{artigoSplit}</p>
