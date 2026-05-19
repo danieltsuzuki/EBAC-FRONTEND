@@ -5,6 +5,6 @@ export function getAllArtigos(): Artigo[] {
     return artigos;
 }
 
-export function getArtigoBySlug(slug: string): Artigo  {
-    return artigos.filter(artigo => artigo.slug === slug)[0];
+export function getArtigoBySlug(slug: string): Artigo {
+    return artigos.filter((artigo) => artigo.slug === slug)[0];
 }

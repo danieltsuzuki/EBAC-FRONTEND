@@ -1,19 +1,15 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 type Props = {
     currentPage: number;
     totalPages: number;
 };
 
-export function Pagination({
-    currentPage,
-    totalPages,
-}: Props) {
+export function Pagination({ currentPage, totalPages }: Props) {
     const path: string = '/pages/artigos';
 
     return (
         <div className="flex items-center justify-center gap-3 mt-10">
-
             {/* Previous */}
             {currentPage > 1 && (
                 <Link
@@ -26,7 +22,6 @@ export function Pagination({
 
             {/* Números */}
             {Array.from({ length: totalPages }).map((_, index) => {
-
                 const page = index + 1;
 
                 const active = page === currentPage;
@@ -37,7 +32,7 @@ export function Pagination({
                         href={`${path}?page=${page}`}
                         className={`
                             px-4 py-2 rounded-lg border
-                            ${active ? "bg-white text-black" : ""}
+                            ${active ? 'bg-white text-black' : ''}
                         `}
                     >
                         {page}
@@ -54,7 +49,6 @@ export function Pagination({
                     Próxima
                 </Link>
             )}
-
         </div>
     );
 }
