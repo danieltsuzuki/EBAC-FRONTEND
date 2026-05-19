@@ -15,6 +15,8 @@ type Props = {
     }>;
 };
 
+export const dynamic = 'force-static';
+
 export default async function Lista({ searchParams }: Props) {
     const params = await searchParams;
 
