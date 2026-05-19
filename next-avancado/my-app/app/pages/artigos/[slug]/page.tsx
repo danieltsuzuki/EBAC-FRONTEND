@@ -6,7 +6,7 @@ type Props = {
     params: Promise<{ slug: string }>
 }
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 export default async function Home({ params, }: Props) {
     const { slug } = await params
