@@ -15,9 +15,10 @@ export function Card({ artigo }: Props) {
                 <Image
                     src={artigo.imageUrl}
                     alt={`Imagem que representa ` + artigo.titulo}
-                    className="mb-5"
+                    className="mb-5 size-auto"
                     width={200}
                     height={120}
+                    loading="eager"
                 />
                 <h2 className="text-lg">{artigo.titulo}</h2>
                 <p className="mx-2 text-justify">{artigoSplit}</p>

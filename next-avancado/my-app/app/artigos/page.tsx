@@ -1,29 +1,37 @@
-import { getAllArtigos } from '../../services/artigosService';
+import { getAllArtigos } from '../services/artigosService';
 import { Card } from '@/components/card';
 import { Metadata } from 'next';
 import { Pagination } from '@/components/pagination';
 import { Artigo } from '@/types/artigoType';
 
-export const metadata: Metadata = {
-    title: 'Tsuzuki Tech',
-    description:
-        'Desenvolvimento moderno, programação e tecnologia na prática. Conteúdos sobre Next.js, Flutter, Java, arquitetura backend, cloud, dicas de carreira e projetos reais para desenvolvedores que querem evoluir continuamente.',
-};
-
 type Props = {
-    searchParams: Promise<{
+    searchParams: {
         page?: string;
-    }>;
+    };
 };
 
-export const dynamic = 'force-dynamic';
+const title = 'Tsuzuki Tech';
+const description =
+    'Desenvolvimento moderno, programação e tecnologia na prática. Conteúdos sobre Next.js, Flutter, Java, arquitetura backend, cloud, dicas de carreira e projetos reais para desenvolvedores que querem evoluir continuamente.';
 
-export default async function Lista({ searchParams }: Props) {
-    const params = await searchParams;
+export const generateMetadata = async (): Promise<Metadata> => {
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            images: ['icon.svg'],
+        },
+    };
+};
 
+export const dynamic = 'force-static';
+
+export default async function List({ searchParams }: Props) {
     const artigos: Artigo[] = getAllArtigos();
 
-    const currentPage = Number(params.page) || 1;
+    const currentPage = Number(searchParams.page) || 1;
 
     const itemsPerPage = 8;
 
