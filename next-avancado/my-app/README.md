@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# README - Tsuzuki Tech
 
-## Getting Started
+## Sobre o projeto
 
-First, run the development server:
+O **Tsuzuki Tech** é um blog desenvolvido com Next.js focado em desenvolvimento moderno, programação e tecnologia.
+
+O projeto possui:
+
+- Renderização híbrida (SSR/SSG)
+- SEO com metadata dinâmica
+- Paginação de artigos
+- Rotas dinâmicas
+- Layout responsivo
+- Otimização de imagens
+- Deploy na Vercel
+
+---
+
+# Tecnologias utilizadas
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+---
+
+# Como rodar o projeto
+
+## 1. Clone o repositório
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+```
+
+---
+
+## 2. Acesse a pasta
+
+```bash
+cd nome-do-projeto
+```
+
+---
+
+## 3. Instale as dependências
+
+```bash
+npm install
+```
+
+ou
+
+```bash
+yarn
+```
+
+---
+
+## 4. Execute o projeto
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ou
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 5. Abra no navegador
 
-To learn more about Next.js, take a look at the following resources:
+```txt
+http://localhost:3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Build de produção
 
-## Deploy on Vercel
+```bash
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Executar produção localmente
+
+```bash
+npm start
+```
+
+---
+
+# Estrutura do projeto
+
+```txt
+src/
+ ├── app/
+ ├── components/
+ ├── services/
+ ├── types/
+ ├── styles/
+```
+
+---
+
+# Funcionalidades
+
+- Listagem de artigos
+- Página dinâmica de detalhes
+- Metadata dinâmica para SEO
+- Open Graph
+- Paginação
+- Renderização estática e dinâmica
+- Otimização automática de imagens
+
+---
+
+# Deploy
+
+Projeto publicado na Vercel:
+
+https://ebac-frontend.vercel.app/artigos
+
+---
+
+# Scripts disponíveis
+
+```json
+{
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+}
+```
+
+---
+
+# Autor
+
+Daniel Tsuzuki
