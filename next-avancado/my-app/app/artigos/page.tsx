@@ -1,8 +1,9 @@
 import { getAllArtigos } from '../services/artigosService';
 import { Card } from '@/components/card';
-import { Metadata } from 'next';
+// import { Metadata } from 'next';
 import { Pagination } from '@/components/pagination';
 import { Artigo } from '@/types/artigoType';
+import { Metadata } from 'next';
 
 type Props = {
     searchParams: {
@@ -26,12 +27,22 @@ export const generateMetadata = async (): Promise<Metadata> => {
     };
 };
 
-export const dynamic = 'force-static';
+// export async function generateStaticParams() {
+//     const artigos = getAllArtigos();
+//     const itemsPerPage = 8;
+//     const totalPages = Math.ceil(artigos.length / itemsPerPage);
+//     return Array.from({ length: totalPages }, (_, i) => ({
+//         page: String(i + 1),
+//     }));
+// }
+
+// export const dynamic = 'force-dynamic';
+// export const revalidate = false;
 
 export default async function List({ searchParams }: Props) {
     const artigos: Artigo[] = getAllArtigos();
 
-    const currentPage = Number(searchParams.page) || 1;
+    const currentPage = Number(searchParams.page ? searchParams.page : 1);
 
     const itemsPerPage = 8;
 

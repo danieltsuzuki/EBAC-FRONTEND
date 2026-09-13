@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --color-purple: #22053d;
+  --color-gray: #f6f5fa;
+}
+
+*,
+table,
+main,
+body {
+  box-sizing: border-box;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-rubik: var(--font-rubik);
+}
+
+header {
+  font-weight: 500;
+  color: var(--color-gray);
+  font-size: 2em;
+  background-color: var(--color-purple);
+}
+
+body {
+  background: var(--color-gray);
+  color: var(--color-purple);
+}
+
+footer {
+  font-weight: 500;
+  color: var(--color-gray);
+  font-size: 1em;
+  background-color: var(--color-purple);
+}

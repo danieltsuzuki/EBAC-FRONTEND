@@ -6,7 +6,7 @@ type Props = {
 };
 
 export function Pagination({ currentPage, totalPages }: Props) {
-    const path: string = '/pages/artigos';
+    const path: string = '/artigos';
 
     return (
         <div className="flex items-center justify-center gap-3 mt-10">
