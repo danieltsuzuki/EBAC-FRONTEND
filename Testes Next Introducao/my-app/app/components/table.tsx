@@ -21,7 +21,7 @@ export default function Table({ className, items, itemCount }: propsTable) {
         <tbody>
           {items.length === 0 ? (
             <tr>
-              <td colSpan={3} className="border border-gray-300 p-2 font-bold">
+              <td colSpan={2} className="border border-gray-300 p-2 font-bold">
                 Nenhum item encontrado.
               </td>
             </tr>
@@ -38,7 +38,7 @@ export default function Table({ className, items, itemCount }: propsTable) {
           <tfoot>
             <tr>
               <td
-                colSpan={3}
+                colSpan={2}
                 className="border border-gray-300 p-2 font-bold text-start bg-gray-200"
               >
                 Total de itens: {itemCount}

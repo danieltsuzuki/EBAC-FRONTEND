@@ -25,6 +25,11 @@ export default function NovaTarefa({ className, onAddItem }: PropsNovaTarefa) {
     setError("");
   };
 
+  const handleCancel = () => {
+    setName("");
+    setError("");
+  };
+
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
     setError("");
@@ -58,7 +63,11 @@ export default function NovaTarefa({ className, onAddItem }: PropsNovaTarefa) {
             Salvar
           </button>
 
-          <button className="bg-red-500 text-white rounded-md py-2 px-4 hover:bg-red-800 transition-colors font-bold">
+          <button
+            className="bg-red-500 text-white rounded-md py-2 px-4 hover:bg-red-800 transition-colors font-bold"
+            type="button"
+            onClick={handleCancel}
+          >
             Cancelar
           </button>
         </div>

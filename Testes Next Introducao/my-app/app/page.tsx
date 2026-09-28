@@ -1,9 +1,12 @@
 import Todo from "./page/todo";
+import { getTasks } from "@/data/tasks";
 
-export default function Home() {
+export default async function Home() {
+  const tasks = await getTasks();
+
   return (
     <div>
-      <Todo />
+      <Todo initialItems={tasks} />
     </div>
   );
 }

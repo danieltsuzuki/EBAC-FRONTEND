@@ -6,8 +6,12 @@ import { TypeItem } from "../types/items.type";
 import NovaTarefa from "../components/novaTarefa";
 import useContadorDeTarefas from "../hooks/useContadorDeTarefas";
 
-export default function Todo() {
-  const [items, setItems] = useState<TypeItem[]>([]);
+type PropsTodo = {
+  initialItems?: TypeItem[];
+};
+
+export default function Todo({ initialItems = [] }: PropsTodo) {
+  const [items, setItems] = useState<TypeItem[]>(initialItems);
 
   const onAddItem = useCallback((item: TypeItem): void => {
     setItems((prev) => [...prev, item]);

@@ -32,3 +32,29 @@ test("Deve exibir mensagem de erro ao tentar adicionar um item com nome vazio", 
     HTMLElement,
   );
 });
+
+test("Deve limpar o campo de texto e mensagens de erro ao clicar no botão Cancelar", () => {
+  const mockOnAddItem = jest.fn();
+  render(<NovaTarefa onAddItem={mockOnAddItem} />);
+
+  const input = screen.getByLabelText("Nome*") as HTMLInputElement;
+  const cancelButton = screen.getByText("Cancelar") as HTMLButtonElement;
+  const saveButton = screen.getByText("Salvar");
+
+  // Garante que o botão Cancelar tem explicitamente type='button' para não submeter formulário
+  expect(cancelButton.type).toBe("button");
+
+  // Simula erro ao tentar salvar vazio
+  fireEvent.click(saveButton);
+  expect(screen.getByText("Por favor, insira um nome válido.")).toBeInTheDocument();
+
+  // Digita algo e clica em cancelar
+  fireEvent.change(input, { target: { value: "Tarefa Cancelada" } });
+  expect(input.value).toBe("Tarefa Cancelada");
+
+  fireEvent.click(cancelButton);
+
+  expect(input.value).toBe("");
+  expect(screen.queryByText("Por favor, insira um nome válido.")).not.toBeInTheDocument();
+  expect(mockOnAddItem).not.toHaveBeenCalled();
+});
